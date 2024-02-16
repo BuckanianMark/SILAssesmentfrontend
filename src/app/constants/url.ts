@@ -1,4 +1,6 @@
-const BASE_URL = "http://localhost:8000/api"
+//const BASE_URL = "http://localhost:8000/api"
+const BASE_URL = "https://sil-assessment-backend.onrender.com/api"
+
 export const ALBUMS_URL = BASE_URL + '/albums/getAllAlbums'
 export const ALBUMS_BY_ID_URL = BASE_URL + '/albums/'
 export const USERS_URL = BASE_URL + '/users/getAllUsers'
