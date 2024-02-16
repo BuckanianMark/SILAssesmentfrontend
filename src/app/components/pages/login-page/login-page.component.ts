@@ -9,6 +9,7 @@ import { AuthServiceService } from 'src/app/Helpers/services/auth-service.servic
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit{
+  sampleemail:string="burky@gmail.com"
   type:string = 'password';
   isText:boolean = false;
   eyeIcon:string = "fa-eye-slash"
