@@ -1,0 +1,17 @@
+<ng-container *ngIf="(breadCrumb$ | async) as breadCrumbs" class="container">
+    <section *ngIf="breadCrumbs.length > 0 && breadCrumbs[breadCrumbs.length-1].label !== 'Home'" >
+        <div class="card">
+            <div>
+                <h1 class="text-lg font-[600] uppercase border-b-2 border-darkBlue2">
+                    {{breadCrumbs.length > 0 && breadCrumbs[breadCrumbs.length - 1].label}}
+                </h1>
+            </div>
+            <div class="xng">
+                <xng-breadcrumb>
+
+                </xng-breadcrumb>
+            </div>
+        </div>
+    </section>
+
+</ng-container>

@@ -1,0 +1,19 @@
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: aliceblue;
+    margin-top: 20px;
+
+}
+h1{
+   color: #07142a;
+}
+.xng{
+    background: #afcce0;
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+xng-breadcrumb{
+    color: #07142a;
+}

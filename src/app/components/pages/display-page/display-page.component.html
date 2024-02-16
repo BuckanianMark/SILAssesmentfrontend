@@ -1,0 +1,23 @@
+<h1 class="text-center mt-10 text-xl"> Albums and Users Manager</h1>
+<div class="flex items-center justify-center mt-5 gap-[20px]">
+
+    <div class="bg-lightBlue shadow py-4 px-8 rounded-md">
+        <h2 class="font-semibold text-lg">Albums</h2>
+        <p class="font-bold">Count ({{albums.length}}) </p>
+    </div>
+    <div class="bg-lightBlue shadow py-4 px-8 rounded-md">
+        <h2 class="font-semibold text-lg">Users</h2>
+        <p class="font-bold">Count ({{users.length}}) </p>
+    </div>
+</div>
+<div class="mt-6 flex items-center flex-col">
+    <h1 class="text-center text-lg ">Available Users and Album Count</h1>
+    <span class="w-[300px] h-[5px] rounded  bg-darkBlue flex "></span>
+    <ul class="flex items-center justify-center flex-wrap mt-2  gap-[15px]">
+        <li *ngFor="let user of users" class="bg-[#afcce0] text-darkBlue2 py-4 px-8 rounded-sm">
+        <h1> <span class="font-bold text-gray-700">Name :</span>  {{user.name}} </h1>
+        <p> <span class="font-bold text-gray-700">Email :</span>  {{user.email}} </p>
+        <p>Albums({{user.albums.length}}) </p>
+        </li>
+    </ul>
+</div>

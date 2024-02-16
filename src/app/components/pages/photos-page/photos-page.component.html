@@ -1,0 +1,15 @@
+
+
+
+<div class="flex items-center justify-center   mt-6  ">
+
+    <ul class="flex flex-wrap   items-center md:gap-[25px] gap-[20px] justify-center  mx-3">
+        <li *ngFor="let photo of photos" class="w-[150px] sm:[170px] md:w-[230px] h">
+            <img [src]="photo.ImageUrl" alt="image" width="200px" class="w-[120px] sm:w-[150px] md:w-[200px]">
+            <h2 class="text-lg font-bold text-gray-600">{{photo.photoTitle}}</h2>
+            <button routerLink="/photos/{{photo._id}}"
+            class="float-right mr-4 hover:cursor-pointer bg-lightBlue py-1 px-4 rounded-sm font-semibold text-darkBlue2"> edit</button>
+          
+        </li>
+    </ul>
+</div>

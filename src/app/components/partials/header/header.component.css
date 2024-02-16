@@ -1,0 +1,19 @@
+a.active
+{
+    border-bottom:  2px solid #072d44;
+    padding-bottom: 1px;
+    color: #072d44;
+    font-weight: 700;
+}
+#bigscreen{
+    display: none;
+}
+
+@media screen and (min-width: 770px){
+ #smallscreen{
+    display: none;
+ }
+#bigscreen{
+     display: flex;
+ }
+}

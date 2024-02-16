@@ -1,0 +1,27 @@
+
+
+
+<div class="flex  items-start mt-8 justify-center gap-4 md:gap-[30px]" *ngIf="photo">
+
+    <div>
+        <img [src]="photo.ImageUrl" alt="">
+    </div>
+    <div>
+        <h1 class="text-xl font-semibold">Curent Title  </h1>
+        <p class="text-lg text-darkBlue"> {{photo.photoTitle}}</p>
+        <button class="bg-lightBlue  py-1 px-5 rounded">edit</button>
+        <form 
+        [formGroup]="editPhoto"
+        (ngSubmit)="onSubmit()"
+        class="mt-4 flex  sm:flex-row flex-col gap-2 items-start">
+            <input 
+            formControlName="value"
+             type="text"
+             placeholder="Input new title.."
+             class="py-1 outline-none focus:border-lightBlue border-2  px-5 rounded bg-[whitesmoke] shadow-md">
+            <button 
+            type="submit"
+            class="bg-[#e88] rounded text-darkBlue font-semibold py-1 px-5">save</button>
+            </form>
+    </div>
+</div>

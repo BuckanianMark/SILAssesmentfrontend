@@ -1,0 +1,70 @@
+<div id="bigscreen"
+ class="bg-lightBlue min-h-[50px] sm:flex items-start sm:py-7 sm:justify-around">
+    <div class="logo text-darkBlue2  ">
+        <a routerLink="/" class="text-xl lg:text-3xl  font-bold">SIL  Manager</a>
+        <i class="fa fa-pencil"></i>
+    </div>
+   
+    <ul class="flex items-center uppercase text-gray-800 gap-4 text-[14px] font-[600]">
+        <li><a [routerLink]="['/home']" 
+            routerLinkActive="active" >Home</a></li>
+        <li><a [routerLink]="['/users']"  
+            routerLinkActive="active" >Users</a></li>
+        <li><a [routerLink]="['/albums']" 
+            routerLinkActive="active" >Albums</a></li>
+        <li><a [routerLink]="['/photos']"
+            routerLinkActive="active">Photos</a></li>
+    </ul>
+    <button
+    *ngIf="!IsAuth"
+     routerLink="/login" 
+     class="bg-[#e88] border-2 hover:opacity-90 hover:border-[#e88] duration-150   py-1 px-6 rounded-lg font-semibold text-darkBlue">login</button>
+     <li *ngIf="IsAuth" class="list-none flex flex-col items-center">
+        <a class="text-darkBlue2 text-lg hover:cursor-pointer text-[15px] flex items-center justify-center gap-2"><p>Welcome 😇 <span class="font-bold text-darkBlue">{{user.name}}</span></p> <i class="fa fa-caret-down fa-2x" (click)="handleshow()"></i></a>
+        <a 
+        (click)="logOut()"
+        #logout 
+        class="bg-light cursor-pointer hidden flex items-center justify-center gap-3 rounded-md  py-1 px-4 hover:bg-darkBlue duration-150 hover:text-lightBlue ">logout <i class="fa-solid fa-right-from-bracket  "></i></a>
+     </li>
+</div>
+
+<div id="smallscreen" class="bg-lightBlue py-3 px-10  flex  items-center justify-between ">
+    <div>
+        <a routerLink="/" class="text-xl lg:text-3xl  font-bold">SIL  Manager</a>
+        <i class="fa fa-pencil"></i>
+    </div>
+    <i 
+    (click)="handledivShow()"
+    class="fa fa-bars cursor-pointer text-darkBlue">
+    </i>
+    <div
+    #smallscrenslider
+     class="absolute w-[300px]  z-[3000] bg-[whitesmoke] duration-150 mr-[-70%]  h-[50%] right-0 pt-4 mt-[60%] rounded-md">
+        <i 
+        (click)="handledivHide()"
+        class="fa fa-times-circle cursor-pointer fa-2x text-mediumBlue float-right mr-5 mt-8"></i>
+        <ul class="flex items-start right-0 uppercase font-semibold text-darkBlue left-0 mt-[60px] ml-[50px] gap-[20px] flex-col justify-center text-[18px]">
+            <li #li (click)="handledivHide()"><a [routerLink]="['/home']" 
+                routerLinkActive="active" >Home</a></li>
+            <li #li (click)="handledivHide()"><a [routerLink]="['/users']"  
+                routerLinkActive="active" >Users</a></li>
+            <li #li (click)="handledivHide()"><a [routerLink]="['/albums']" 
+                routerLinkActive="active" >Albums</a></li>
+            <li #li (click)="handledivHide()"><a [routerLink]="['/photos']"
+                routerLinkActive="active">Photos</a></li>
+            <li #li (click)="handledivHide()" *ngIf="!IsAuth">
+                <button
+                 routerLink="/login" 
+                 class="bg-[#e88] border-2 hover:opacity-90 hover:border-[#e88] duration-150   py-1 px-6 rounded-lg font-semibold text-darkBlue">login</button>
+            </li>
+            <li #li (click)="handledivHide()" *ngIf="IsAuth" class="font-bold flex text-darkBlue2 items-center justify-center gap-2">
+                {{user.name}}
+                <button
+                (click)="logOut()"
+                 routerLink="/home"
+                 class="bg-[#e88] cursor-pointer  flex items-center justify-center gap-3 rounded-md  py-1 px-4 hover:bg-darkBlue duration-150 ">logout  <i class="fa-solid fa-right-from-bracket  "></i></button>
+            </li>
+        </ul>
+    </div>
+
+</div>

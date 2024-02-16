@@ -1,0 +1,10 @@
+#overall{
+    height: 100%;
+}
+app-footer{
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,9 @@
+<div class="flex items-center mx-4 justify-center flex-col ">
+    <h1 class="text-lg text-gray-700 font-semibold">Available Albums</h1>
+    <span class="w-[300px] h-[5px] rounded  bg-darkBlue flex "></span>
+    <ul class="flex items-center justify-center mt-5  flex-wrap gap-[15px]">
+        <li *ngFor="let album of albums" class="bg-[#e88] py-4 px-6 rounded">
+        <h1> {{album.Title}} </h1>
+        </li>
+    </ul>
+</div>
