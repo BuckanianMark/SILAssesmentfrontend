@@ -17,3 +17,7 @@ a.active
      display: flex;
  }
 }
+
+@media screen and (max-width: 360px){
+  
+}
