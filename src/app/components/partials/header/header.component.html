@@ -5,7 +5,7 @@
         <i class="fa fa-pencil"></i>
     </div>
    
-    <ul class="flex items-center uppercase text-gray-800 gap-4 text-[14px] font-[600]">
+    <ul class="flex items-center uppercase text-gray-800 gap-4 text-[16px] font-[600]">
         <li><a [routerLink]="['/home']" 
             routerLinkActive="active" >Home</a></li>
         <li><a [routerLink]="['/users']"  
@@ -20,7 +20,7 @@
      routerLink="/login" 
      class="bg-[#e88] border-2 hover:opacity-90 hover:border-[#e88] duration-150   py-1 px-6 rounded-lg font-semibold text-darkBlue">login</button>
      <li *ngIf="IsAuth" class="list-none flex flex-col items-center">
-        <a class="text-darkBlue2 text-lg hover:cursor-pointer text-[15px] flex items-center justify-center gap-2"><p>Welcome 😇 <span class="font-bold text-darkBlue">{{user.name}}</span></p> <i class="fa fa-caret-down fa-2x" (click)="handleshow()"></i></a>
+        <a class="text-darkBlue2 text-lg hover:cursor-pointer text-[16px] flex items-center justify-center gap-2"><p>Welcome 😇 <span class="font-bold text-darkBlue">{{user.name}}</span></p> <i class="fa fa-caret-down fa-2x" (click)="handleshow()"></i></a>
         <a 
         (click)="logOut()"
         #logout 
