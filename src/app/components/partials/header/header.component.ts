@@ -25,10 +25,10 @@ export class HeaderComponent implements OnInit{
    
   }
   handledivShow(){
-    this.smallscreendiv.nativeElement.classList.remove("translate-y-[-100%]")
+    this.smallscreendiv.nativeElement.classList.remove("translate-x-[100%]")
   }
   handledivHide(){
-    this.smallscreendiv.nativeElement.classList.add("translate-y-[-100%]")
+    this.smallscreendiv.nativeElement.classList.add("translate-x-[100%]")
   }
   handleshow(){
     this.logout.nativeElement.classList.toggle("hidden")

@@ -39,11 +39,11 @@
     </i>
     <div
     #smallscrenslider
-     class="absolute w-[300px]  z-[3000] bg-[whitesmoke] duration-150 transition-all translate-y-[-100%]  h-[50%] right-0 pt-6 mt-[60%] rounded-md">
+     class="absolute w-[300px]   z-[3000] bg-[whitesmoke] duration-150 transition-all translate-x-[100%]  h-[70%] right-0 pt-6 mt-[60%] rounded-md">
         <i 
         (click)="handledivHide()"
-        class="fa fa-times-circle cursor-pointer fa-2x text-mediumBlue float-right mr-5 mt-8"></i>
-        <ul class="flex items-start right-0 uppercase font-semibold text-darkBlue left-0 mt-[60px] ml-[50px] gap-[20px] flex-col justify-center text-[18px]">
+        class="fa fa-times-circle cursor-pointer fa-2x text-mediumBlue float-right mr-5 mt-[50%]"></i>
+        <ul class="flex items-start right-0 uppercase font-semibold text-darkBlue left-0 mt-[60%] ml-[50px] gap-[20px] flex-col justify-center text-[18px]">
             <li #li (click)="handledivHide()"><a [routerLink]="['/home']" 
                 routerLinkActive="active" >Home</a></li>
             <li #li (click)="handledivHide()"><a [routerLink]="['/users']"  
