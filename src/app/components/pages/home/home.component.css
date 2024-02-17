@@ -1,0 +1,13 @@
+
+
+#smallscreen{
+    display: none;
+}
+@media screen and (max-width: 650px){
+    #bigscreen{
+       display: none;
+    }
+    #smallscreen{
+        display: block;
+    }
+}

@@ -1,15 +1,15 @@
 
 
 
-<div class="flex  items-start mt-8 justify-center gap-4 md:gap-[30px]" *ngIf="photo">
+<div id="container" class="flex  items-start mt-8 justify-center gap-4 md:gap-[30px]" *ngIf="photo">
 
     <div>
         <img [src]="photo.ImageUrl" alt="">
     </div>
     <div>
         <h1 class="text-xl font-semibold">Curent Title  </h1>
-        <p class="text-lg text-darkBlue"> {{photo.photoTitle}}</p>
-        <button class="bg-lightBlue  py-1 px-5 rounded">edit</button>
+        <p id="p" class="text-lg text-darkBlue"> {{photo.photoTitle}}</p>
+        <button class=" py-1 font-bold text-darkBlue2 capitalize">edit</button>
         <form 
         [formGroup]="editPhoto"
         (ngSubmit)="onSubmit()"

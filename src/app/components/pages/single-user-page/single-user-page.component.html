@@ -1,14 +1,15 @@
-<div class="mt-10 w-full">
+<div id="container" class="mt-10 w-full">
     <div>
        <ul>
         <li *ngIf="user">
-        <div class="flex items-start justify-center sm:gap-[20px] flex-col sm:flex-row bg-lightBlue md:mx-[20%] md:py-8 rounded-md">
+        <div class="flex md:items-start items-center justify-center sm:gap-[20px] gap-3 py-4 flex-col sm:flex-row bg-lightBlue mx-[20%] md:py-8 rounded-md">
      
-            <div>
-                <h1 class="text-lg text-darkBlue font-bold border-b-2 w-[50px] border-darkBlue2">User</h1>
-                <h1><span class="text-gray-700 font-semibold">Name: </span> {{user.name}} </h1>
-                <p> <span class="text-gray-700 font-semibold">Email: </span>  {{user.email}} </p>
-                <p> <span class="text-gray-700 font-semibold">UserName </span>  {{user.userName}} </p>
+            <div class="flex flex-col items-center justify-center">
+                    <h1 class="text-lg text-darkBlue font-bold border-b-2 w-[50px] border-darkBlue2 ">User</h1>
+                    <h1><span class="text-gray-700 font-semibold">Name: </span> {{user.name}} </h1>
+                    <p> <span class="text-gray-700 font-semibold">Email: </span>  {{user.email}} </p>
+                    <p> <span class="text-gray-700 font-semibold">UserName </span>  {{user.userName}} </p>
+                
             </div>
             <div *ngIf="user.albums">
                 
@@ -17,8 +18,9 @@
                     <h2>  <span class="font-bold text-">></span> {{album.Title}} </h2>
                 </li>
             </div>
-            <div *ngIf="user.albums >= 0">
-                <h1 class="font-semibold text-lg">Sorry!! 😥</h1>
+
+            <div *ngIf="user.albums <= 0" class="">
+                <h1 class="font-semibold text-lg"> Sorry!! 😥</h1>
                 <p class="text-sm">This user has no albums</p>
             </div>
         </div>

@@ -25,10 +25,10 @@ export class HeaderComponent implements OnInit{
    
   }
   handledivShow(){
-    this.smallscreendiv.nativeElement.classList.remove("mr-[-70%]")
+    this.smallscreendiv.nativeElement.classList.remove("mr-[-100%]")
   }
   handledivHide(){
-    this.smallscreendiv.nativeElement.classList.add("mr-[-70%]")
+    this.smallscreendiv.nativeElement.classList.add("mr-[-100%]")
   }
   handleshow(){
     this.logout.nativeElement.classList.toggle("hidden")
