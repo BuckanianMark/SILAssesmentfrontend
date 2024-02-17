@@ -39,12 +39,13 @@
                 <i 
                 (click)="hideShowPass()" 
                 class="fa {{eyeIcon}} absolute cursor-pointer right-0 bottom-0 mr-5 mb-5"></i>
-                <small 
-                class="text-red-700 font-bold" 
-                *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
-                    <i class="fa-solid fa-xmark"></i> Password is required
-                </small>
+             
             </div>
+            <small 
+            class="text-red-700 font-bold mx-12" 
+            *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">
+                <i class="fa-solid fa-xmark"></i> Password is required
+            </small>
             <button type="submit" class="bg-[#e88] mx-12 border-2 w-[150px] hover:opacity-90 hover:border-[#e88] duration-150   py-2 px-6 rounded-lg font-semibold text-darkBlue">login</button>
         </form>
         <div class="mx-12  text-darkBlue2">
