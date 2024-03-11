@@ -16,6 +16,6 @@ export class AlbumsService {
     return this.http.get(ALBUMS_URL);
   }
   getPaginatedAlbums(params:any):Observable<any>{
-    return this.http.get(PAGINATED_ALBUMS_URL);
+    return this.http.get(PAGINATED_ALBUMS_URL,{params});
   }
 }

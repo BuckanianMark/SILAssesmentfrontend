@@ -1,6 +1,5 @@
-<div class="flex items-center justify-center mt-8">
+<div class="flex items-center justify-center flex-col mt-8">
     <div>
-        <div>
             <pagination-controls
             class="text-darkBlue"
             previousLabel="Previous"
@@ -10,7 +9,7 @@
             </pagination-controls>
         </div>
         <div>
-            <ul class="">
+            <ul class="flex items-center justify-center mt-5  flex-wrap gap-[15px]">
                 @for (album of albums | paginate : {
                     itemsPerPage:pageSize,
                     currentPage:page,
@@ -18,11 +17,24 @@
                 }; track album.id;let i = $index) {
                     <li 
                     [class.active]="i == currentIndex" 
-                    class="">
-
+                    
+                    class="bg-[#e88] py-4 px-6 rounded">
+                    {{album.Title}}
                     </li>
                 }
             </ul>
+            <div class="text-gray-800 flex items-center gap-2 justify-center mt-4 font-semibold">
+                Itemsper Page:
+                <select 
+                class="border-none outline-none bg-lightBlue px-3 rounded-md"
+                (change)="handlePageSizeChange($event)" >
+                @for (size of pageSizes;track size){
+                    <option>
+                        {{size}}
+                    </option>
+                }
+                </select>
+            </div>
         </div>
-    </div>
+    
 </div>

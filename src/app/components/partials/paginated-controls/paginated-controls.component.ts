@@ -10,9 +10,10 @@ import { AlbumsService } from 'src/app/Helpers/services/albums.service';
 export class PaginatedControlsComponent implements OnInit{
   albums:any[]=[]
   currentIndex = -1;
-  page=1;
+  page=0;
   count=0;
   pageSize=5;
+  pageSizes = [3, 6, 9];
 constructor(private albumService:AlbumsService){}
   ngOnInit(): void {
    this.retrieveAlbums()
@@ -44,10 +45,14 @@ constructor(private albumService:AlbumsService){}
       console.log(error)
     }
   )
-}
-  handlePageChange(event:any):void{
-    this.pageSize = event.tathet.value;
-    this.page =1
+  }
+  handlePageChange(event:number):void{
+    this.page = event;
+    this.retrieveAlbums();
+  }
+  handlePageSizeChange(event:any):void{
+    this.pageSize = event.target.value;
+    this.page = 1
     this.retrieveAlbums()
   }
 }
