@@ -1,6 +1,9 @@
 <div id="container" class="flex items-center justify-center my-20">
     <div id="card" class="bg-lightBlue py-8  rounded-xl shadow-md">
-        <form [formGroup]="signupForm" class="flex gap-5 flex-col " >
+        <form 
+        [formGroup]="signupForm" 
+        (ngSubmit)="submit()"
+        class="flex gap-5 flex-col " >
             <div class="flex flex-col mx-12 border-2 py-2 px-3 rounded-md">
                 <label for="" class="text-darkBlue2 font-bold text-lg">
                     UserName
@@ -8,7 +11,7 @@
                 <input
                 formControlName="name" 
                 type="text" 
-                name="userName" 
+                name="name" 
                 placeholder="Your preffered username.."
                 class="py-2 px-3 rounded bg-[whitesmoke] outline-none focus:border-darkBlue focus:border-b-2" >
                 <small 
@@ -57,7 +60,9 @@
             *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">
                 <i class="fa-solid fa-xmark"></i> Password is required
             </small>
-            <button type="submit"  class="bg-[#e88] mx-12 border-2 w-[150px] hover:opacity-90 hover:border-[#e88] duration-150   py-2 px-6 rounded-lg font-semibold text-darkBlue">sign-up</button>
+            <button 
+            type="submit"
+            class="bg-[#e88] mx-12 border-2 w-[150px] hover:opacity-90 hover:border-[#e88] duration-150   py-2 px-6 rounded-lg font-semibold text-darkBlue">sign-up</button>
         </form>
         <div class="mx-12 text-darkBlue2">
             <p>Already have an account <a class="font-bold border-b-2 border-darkBlue2" routerLink="/login">Login</a></p>

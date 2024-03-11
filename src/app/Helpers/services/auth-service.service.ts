@@ -40,6 +40,7 @@ export class AuthServiceService {
     return this.http.post<User>(REGISTER_USER,userRegister).pipe(
       tap({
         next:(user) => {
+          
           this.setUserToLocalStorage(user)
           this.userSubject.next(user)
           this.toastr.success(
@@ -47,11 +48,13 @@ export class AuthServiceService {
           )
         },
         error:(err) => {
+          console.log("Endpoint hit")
           this.toastr.error(err.error,'Register Failed')
         }
       })
     )
   }
+
   logout(){
     this.userSubject.next(new User());
     localStorage.removeItem(USER_KEY);

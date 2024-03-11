@@ -10,8 +10,9 @@ import { AuthServiceService } from 'src/app/Helpers/services/auth-service.servic
   styleUrls: ['./signup-page.component.css']
 })
 export class SignupPageComponent implements OnInit{
-  type:string = 'password';
-  isText:boolean = false;
+
+  type:string = 'password'
+  isText:boolean = false
   eyeIcon:string = "fa-eye-slash"
   signupForm!:FormGroup
   isSubmitted = false;
@@ -33,18 +34,13 @@ export class SignupPageComponent implements OnInit{
   hideShowPass(){
     this.isText =! this.isText;
     this.isText ? this.eyeIcon = "fa-eye" : this.eyeIcon = "fa-eye-slash"
-    this.isText ? this.type ="text" : this.type = "password";
-    // if(this.type = "text"){
-    //   this.eyeIcon = "fa-eye" 
-    // }else{
-    //   this.eyeIcon = "fa-eye-slash" 
-    // }
-   
+    this.isText ? this.type ="text" : this.type = "password"; 
   }
   get fc(){
     return this.signupForm.controls
   }
   submit(){
+    console.log("saving")
     this.isSubmitted =true;
     if(this.signupForm.invalid) return;
     const fv = this.signupForm.value;
@@ -54,8 +50,15 @@ export class SignupPageComponent implements OnInit{
       password:fv.password
     }
     this.authService.register(user).subscribe(_ => {
-      this.router.navigateByUrl(this.returnUrl)
+      this.router.navigateByUrl("/login")
     })
   }
-
+  // submit(){
+  //   this.isSubmitted = true;
+  //   if(this.signupForm.invalid) return;
+  //   this.authService.register({email:this.fc['email'].value,password:this.fc['password'].value,name:this.fc['name'].value}).subscribe(() => {
+  //     console.log("Endpoint hit")
+  //     this.router.navigateByUrl(this.returnUrl);
+  //   })
+  // }
 }
