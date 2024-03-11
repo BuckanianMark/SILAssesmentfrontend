@@ -1,10 +1,11 @@
-<div>
+<div class="flex items-center justify-center mt-8">
     <div>
         <div>
             <pagination-controls
-            previousLapel="Prev"
+            class="text-darkBlue"
+            previousLabel="Previous"
             nextLabel="Next"
-            [responsive="true"]
+            [responsive]="true"
             (pageChange)="handlePageChange($event)">
             </pagination-controls>
         </div>
@@ -16,8 +17,7 @@
                     totalItems:count
                 }; track album.id;let i = $index) {
                     <li 
-                    [class.active]="i == currentIndex"
-                    
+                    [class.active]="i == currentIndex" 
                     class="">
 
                     </li>

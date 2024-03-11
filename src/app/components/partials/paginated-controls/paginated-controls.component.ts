@@ -15,7 +15,7 @@ export class PaginatedControlsComponent implements OnInit{
   pageSize=5;
 constructor(private albumService:AlbumsService){}
   ngOnInit(): void {
-   
+   this.retrieveAlbums()
   }
   getRequestParams(page:number,pageSize:number):any{
     let params:any ={}

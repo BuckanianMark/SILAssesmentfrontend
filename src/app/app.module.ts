@@ -21,6 +21,7 @@ import { Loadinginterceptor } from './Helpers/interceptor/loading.interceptor';
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PaginatedControlsComponent } from './components/partials/paginated-controls/paginated-controls.component';
+import { AlbumsPageComponent } from './components/pages/albums-page/albums-page.component';
 
 
 
@@ -38,6 +39,7 @@ import { PaginatedControlsComponent } from './components/partials/paginated-cont
     PhotosPageComponent,
     TitleEditPageComponent,
     NotFoundPageComponent,
+    AlbumsPageComponent,
     PaginatedControlsComponent
   ],
   imports: [
