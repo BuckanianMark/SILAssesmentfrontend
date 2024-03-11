@@ -2,6 +2,7 @@
 const BASE_URL = "https://sil-assessment-backend.onrender.com/api"
 
 export const ALBUMS_URL = BASE_URL + '/albums/getAllAlbums'
+export const PAGINATED_ALBUMS_URL = BASE_URL + '/albums/getpaginatedAlbums'
 export const ALBUMS_BY_ID_URL = BASE_URL + '/albums/'
 export const USERS_URL = BASE_URL + '/users/getAllUsers'
 export const USERS_BY_ID_URL = BASE_URL + '/users/'

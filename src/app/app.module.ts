@@ -19,6 +19,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { Loadinginterceptor } from './Helpers/interceptor/loading.interceptor';
 import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PaginatedControlsComponent } from './components/partials/paginated-controls/paginated-controls.component';
 
 
 
@@ -35,7 +37,8 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
     SignupPageComponent,
     PhotosPageComponent,
     TitleEditPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    PaginatedControlsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { NotFoundPageComponent } from './components/pages/not-found-page/not-fou
     ToastrModule.forRoot({
       timeOut:3000,
       positionClass:'toast-bottom-right',
-    })
+    }),
+    NgxPaginationModule
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:Loadinginterceptor,multi:true}

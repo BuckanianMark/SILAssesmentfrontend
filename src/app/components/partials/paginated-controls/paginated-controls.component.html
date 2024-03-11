@@ -1,0 +1,28 @@
+<div>
+    <div>
+        <div>
+            <pagination-controls
+            previousLapel="Prev"
+            nextLabel="Next"
+            [responsive="true"]
+            (pageChange)="handlePageChange($event)">
+            </pagination-controls>
+        </div>
+        <div>
+            <ul class="">
+                @for (album of albums | paginate : {
+                    itemsPerPage:pageSize,
+                    currentPage:page,
+                    totalItems:count
+                }; track album.id;let i = $index) {
+                    <li 
+                    [class.active]="i == currentIndex"
+                    
+                    class="">
+
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
